@@ -1,0 +1,25 @@
+print("CALCULATOR")
+print("For addition click 1")
+print("For subraction click 2")
+print("For multiplication click 3")
+print("For divition click 4")
+n=int(input())
+num1=int(input("Enter first number:"))
+num2=int(input("Enter second number:"))
+if n==1:
+    print(num1,"+",num2,"=",num1+num2)
+elif n==2:
+    print(num1,"-",num2,"=",num1-num2)
+elif n==3:
+    print(num1,"*",num2,"=",num1*num2)
+elif n==4:
+    if num2==0:
+        print("Error ! Division by 0 not possible")
+    else:
+        print(num1,"/",num2,"=",num1/num2)
+else:
+    print("INVALID INPUT")
+
+
+
+
