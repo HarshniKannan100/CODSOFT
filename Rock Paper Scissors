@@ -1,0 +1,47 @@
+import random
+print("ROCK PAPER SCISSORS")
+print("INSTRUCTIONS:")
+print(" ROCK beats SCISSORS\n SCISSORS beats PAPER\n PAPER beats ROCK")
+cp=0
+up=0
+play=True
+while play:
+    print("Enter ROCK PAPER or SCISSORS :")
+    u=input()
+
+    d=("ROCK","PAPER","SCISSORS")
+    c=random.choice(d)
+    print("Computer Choice: ",c)
+    if c==u:
+        print("PLAY AGAIN")
+        continue
+    elif c=="ROCK" and u=="PAPER" :
+        print("YOU WIN")
+        up+=1
+    elif c=="ROCK" and u=="SCISSORS" :
+        print("YOU LOSE")
+        cp+=1
+    elif c=="PAPER" and u=="ROCK" :
+        print("YOU LOSE")
+        cp+=1
+    elif c=="PAPER" and u=="SCISSORS":
+        print("YOU WIN")
+        up+=1
+    elif c=="SCISSORS" and u=="ROCK":
+        print("YOU WIN")
+        up+=1
+    else :
+        print("YOU LOSE")
+        cp+=1
+    print("DO U WANNA PLAY AGAIN? (YES OR NO) : ")
+    yn=input()
+    if yn=="YES":
+        continue
+    else:
+        print("GAME OVER")
+        play=False
+print("SCORECARD:")
+print("YOU: ",up)
+print("COMPUTER: ",cp)
+        
+
